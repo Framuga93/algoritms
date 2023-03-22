@@ -61,4 +61,15 @@ public class LinkedList<T> {
         }
     }
 
+    public LinkedList<T> reverse(LinkedList<T> linkedList){
+        LinkedList<T> reverseList = new LinkedList<>();
+        Node node = linkedList.head;
+        while (node != null){
+            reverseList.addFirst(node.value);
+            node = node.next;
+        }
+        return reverseList;
+
+    }
+
 }

@@ -7,6 +7,18 @@ public class Main {
         linkedList.addFirst(new Employee("aaa", 23));
         linkedList.addFirst(new Employee("bbb", 24));
         linkedList.addFirst(new Employee("ccc", 22));
+        printList(linkedList);
+        LinkedList<Employee> reverseList = linkedList.reverse(linkedList);
+        printList(reverseList);
+    }
+
+    public static void printList(LinkedList<Employee> list){
+        LinkedList<Employee>.Node node = list.head;
+        while (node != null){
+            System.out.printf("%s - %d\n", node.value.getName(), node.value.getAge());
+            node = node.next;
+        }
+
     }
 
 }
