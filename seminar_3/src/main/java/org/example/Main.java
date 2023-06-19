@@ -8,6 +8,7 @@ public class Main {
         linkedList.addFirst(new Employee("bbb", 24));
         linkedList.addFirst(new Employee("ccc", 22));
         printList(linkedList);
+        System.out.println();
         LinkedList<Employee> reverseList = linkedList.reverse(linkedList);
         printList(reverseList);
     }

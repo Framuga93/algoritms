@@ -6,10 +6,13 @@ public class LinkedList<T> {
 
     public Node head;
 
+    public Node tail;
+
     public class Node{
 
         public T value;
         public Node next;
+        public Node prev;
     }
 
     public void addFirst(T value){
@@ -69,6 +72,14 @@ public class LinkedList<T> {
             node = node.next;
         }
         return reverseList;
+
+    }
+
+    public void reverseV2(LinkedList<T> linkedList){
+        Node node = linkedList.head;
+        while (node != null){
+            node = node.next;
+        }
 
     }
 
